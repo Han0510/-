@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<script src="jquery.js"></script>
+	<script src="model.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<style>
+	#select a, #sort a{
+		color: #666666;
+		margin: 10px 30px;
+	}
+	#select a:hover, #sort a:hover{
+		text-decoration: none;
+	}
+	#select{
+		margin: 50px 0;
+	}
+	#select>div{
+		width: 100%;
+		padding:20px 12px;
+		border: 1px solid #EFEDEE;
+	}
+	#select>div i{
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		border: 1px solid #CCCCCC;
+		position: relative;
+		top: 3px;
+	}
+	#sort{
+		padding: 20px;
+		width: 100%;
+		background-color: #F7F8FA;
+		margin-bottom: 30px;
+		font-size: 16px;
+	}
+	#sort a:first-child{
+		color: #FC4902;
+	}
+	#content{
+		width: 100%;
+		display: flex;
+		border: 1px solid #EFEDEE;
+		margin-bottom: 20px;
+	}
+	#content div{
+		width: 50%;
+	}
+	#content div p{
+		margin: 20px;
+	}
+	#content div a{
+		display: inline-block;
+		color: black;
+		margin: 15px 0 10px 20px;
+	}
+	#content div a:hover{
+		text-decoration: none;
+		color: #FEA201;
+	}
+</style>
+<body>
+	<div class="top">
+		<div class="contentWidth">
+			<span>创享生活 玩遍世界！</span>
+			<span>您好！欢迎光临五彩草原国际 服务热线:400-6666-666</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<nav>
+		<div class="header">
+			<div class="left">
+				<img src="images/logo.png" alt="五彩草原" />
+				<img src="images/font4.png" alt="" />
+			</div>
+			<div class="right">
+				<ul>
+					<li><a >首页</a></li>
+					<li id="list"><a>呼伦贝尔之旅</a>
+						<div id="solid">
+							<a >做一次蒙古人</a>
+							<a >我在呼伦贝尔遇见你</a>
+							<a >微旅行</a>
+						</div>
+					</li>
+					<li style="border-bottom: 3.5px solid #FC4902;"><a >国际游</a></li>
+					<li><a >亲子游</a></li>
+					<li><a >五彩团队</a></li>
+					<li><a >五彩游记</a></li>
+					<li><a >五彩影像</a></li>
+					<li><a >五彩新闻</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--轮播-->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	    <ol class="carousel-indicators">
+	        <li data-target="#myCarousel" data-slide-to="0" data-interval='100' class="active"></li>
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+	    </ol>   
+	    <div class="carousel-inner">
+	        <div class="item active">
+	            <img src="images/index.jpg" alt="First slide">
+	        </div>
+	        <div class="item">
+	            <img src="images/index.jpg" alt="Second slide">
+	        </div>
+	    </div>
+	    <a  id="leftIcon" href="#myCarousel" 
+	        data-slide="prev">
+			<div class="showView"></div>
+	    </a>
+	    <a id="rightIcon"  href="#myCarousel" 
+	        data-slide="next">
+	        <div class="showView"></div>
+	    </a>
+	</div>
+	<div class="contentWidth">
+		<section id="select">
+			<div>
+				<span>目的地</span>
+				<a href=""><i></i> 全部</a>
+				<a href=""><i></i> 东南亚及南亚</a>
+				<a href=""><i></i> 海岛</a>
+				<a href=""><i></i> 欧美</a>
+				<a href=""><i></i>  澳新及其他</a>
+			</div>
+			<div>
+				<span>主体</span>
+				<a href=""><i></i> 全部</a>
+				<a href=""><i></i> 探秘文化</a>
+				<a href=""><i></i> 亲密自然</a>
+				<a href=""><i></i> 交流游历</a>
+				<a href=""><i></i> 情侣蜜月</a>
+				<a href=""><i></i> 买手推荐</a>
+				<a href=""><i></i> 舌尖盛宴</a>
+				<a href=""><i></i> 亲子乐享</a>
+			</div>
+		</section>
+		<section id="sort">
+			<a href="">综合 <span class="glyphicon glyphicon-arrow-down"></span></a>
+			<a href="">人气 <span class="glyphicon glyphicon-arrow-down"></span></a>
+			<a href="">最新 <span class="glyphicon glyphicon-arrow-down"></span></a>
+		</section>
+		<section id="content">
+			<div></div>
+			<div>
+				<a href="套餐.html">123</a>
+				<p>主体<i style="display: inline-block;width: 10px;height: 20px;border: 1px solid #3EAFB3;position: relative;top: 5px;margin-left: 20px;"></i></p>
+				<p><span></span>行程天数 : 0天 &#x3000;<span></span>出发</p>
+				<p><span></span>航班</p>
+				<p><span></span>酒店</p>
+				<p><span></span>车导</p>
+				<p><span></span>亮点</p>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="contentWidth">
+			<section>
+				<h4>关注我们</h4>
+				<div class="Search">
+					<p>微信平台</p>
+					<img src="images/60.png" alt="" />
+					<h5><img src="images/tag3.png" alt="" /><sub>扫码关注</sub></h5>
+				</div>
+				<div class="Search">
+					<p>官方微博</p>
+					<img src="images/62.jpg" alt="" />
+					<h5><img src="images/tag4.png" alt="" /><sub>加关注</sub></h5>
+				</div>
+			</section>
+			<div id="introduce">
+				<ul>
+					<li><span>我们的服务</span></li>
+					<li><a href="">民族之旅</a></li>
+					<li><a href="">五彩游记</a></li>
+					<li><a href="五彩影像.html">五彩影像</a></li>
+					<li><a href="亲子游.html">亲子游</a></li>
+					<li><a href="五彩新闻.html">五彩新闻</a></li>
+				</ul>
+				<ul>
+					<li><span>友情链接</span></li>
+					<li><a href="http://www.ishjin.com/" target="_blank">尚锦科技</a></li>
+					<li><a href="http://pan.aishangsou.com/" target="_blank">友情链接</a></li>
+					<li><a href="http://guge.aishangsou.com/" target="_blank">谷歌搜索</a></li>
+				</ul>
+			</div>
+			<div id="relation">
+				<h3>免费服务热线</h3>
+				<h2>400-6666-666</h2>
+				<p>邮箱：wucaiguoji@163.com</p>
+				<h3>在线客户</h3>
+				<h2>QQ:18096347120</h2>
+				<p>周一至周六 9:00-18:00</p>
+			</div>
+		</div>
+	</footer>
+	<script src="js/share.js"></script>
+</body>
+</html>

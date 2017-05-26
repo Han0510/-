@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<script src="jquery.js"></script>
+	<script src="model.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<style>
+	#navMe{
+		
+	}
+	#navMe ul{
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		bottom: 44px;
+	}
+	#navMe a {
+		display: inline-block;
+		color: white;
+		font-size: 16px;
+		width: 150px;
+		height: 46px;
+		background-color: #3D5169;
+		
+	}
+	#navMe li{
+		float: left;
+		width: 150px;
+		height: 46px;
+		text-align: center;
+		line-height: 46px;
+	}
+	#color li{
+		background-color: #FEA201;
+	}
+	#content h3{
+		font-size: 18px;
+		font-weight: bold;
+		background-color: #EDF4FD;
+		padding: 10px 20px;
+		margin: 50px 0;
+	}
+	#content h3:before{
+		content: '●  ';
+	}
+	#content button{
+		font-size: 18px;
+	}
+	#content p{
+		font-size: 18px;
+		border-bottom: 1px dashed #666666;
+		padding-bottom: 10px;
+	}
+	#content ol{
+		margin: 0;
+		padding: 0;
+		margin-bottom: 100px;
+		/*list-style-type: none;*/
+	}
+	#content li {
+		font-size: 16px;
+		margin: 20px;
+		color: #666666;
+	}
+</style>
+<body>
+	<div class="top">
+		<div class="contentWidth">
+			<span>创享生活 玩遍世界！</span>
+			<span>您好！欢迎光临五彩草原国际 服务热线:400-6666-666</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<nav>
+		<div class="header">
+			<div class="left">
+				<img src="images/logo.png" alt="五彩草原" />
+				<img src="images/font4.png" alt="" />
+			</div>
+			<div class="right">
+				<ul>
+					<li><a >首页</a></li>
+					<li id="list"><a>呼伦贝尔之旅</a>
+						<div id="solid">
+							<a >做一次蒙古人</a>
+							<a >我在呼伦贝尔遇见你</a>
+							<a >微旅行</a>
+						</div>
+					</li>
+					<li><a >国际游</a></li>
+					<li><a >亲子游</a></li>
+					<li style="border-bottom: 3.5px solid #FC4902;"><a >五彩团队</a></li>
+					<li><a >五彩游记</a></li>
+					<li><a >五彩影像</a></li>
+					<li><a >五彩新闻</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--轮播-->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	    <ol class="carousel-indicators">
+	        <li data-target="#myCarousel" data-slide-to="0" data-interval='100' class="active"></li>
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+	    </ol>   
+	    <div class="carousel-inner">
+	        <div class="item active">
+	            <img src="images/index5.jpg" alt="First slide">
+	        </div>
+	        <div class="item">
+	            <img src="images/index5.jpg" alt="Second slide">
+	        </div>
+	    </div>
+	    <a  id="leftIcon" href="#myCarousel" 
+	        data-slide="prev">
+			<div class="showView"></div>
+	    </a>
+	    <a id="rightIcon"  href="#myCarousel" 
+	        data-slide="next">
+	        <div class="showView"></div>
+	    </a>
+	</div>
+	<div class="contentWidth">
+		<section id="navMe">
+			<ul>
+				<a href=""><li>我们的故事</li></a>
+				<a href=""><li>我们的精神</li></a>
+				<a href=""><li>我们的旅行</li></a>
+				<a id="color"  href=""><li>加入我们</li></a>
+			</ul>
+		</section>
+		<section id="content">
+			<button type="button" class="btn btn-default">电话销售专员</button>
+			<h3>电话销售专员</h3>
+			<p>岗位职责</p>
+			<ol>
+				<li>通过电话进行产品销售，与外部销售人员合作完成各项销售指标;</li>
+				<li>通过电话沟通了解客户需求, 寻求销售机会并完成销售业绩;</li>
+				<li>开发新客户，拓展与老客户的业务，建立和维护客户档案;</li>
+				<li>协调公司内部资源，提高客户满意度;</li>
+				<li>收集和分析市场数据，并定期反馈最新信息。</li>
+			</ol>
+			<p>职位要求</p>
+			<ol>
+				<li>大专以上学历，1年以上销售工作经验，热爱销售工作，能适应不断变化的工作任务；</li>
+				<li>普通话标准，具有良好的表达能力和沟通能力；</li>
+				<li>富有团队合作精神， 工作积极、勤奋、主动；</li>
+				<li>敢于承受压力，挑战高薪，有开拓进取精神；</li>
+				<li>有一颗上进、感恩、真诚的心，不消极，不抱怨。热情解答客户问题并为客户提供优质服务；</li>
+				<li>认同公司理念、产品及服务模式，对自己的未来有一个良好规划；</li>
+			</ol>
+		</section>
+	</div>
+	<footer>
+		<div class="contentWidth">
+			<section>
+				<h4>关注我们</h4>
+				<div class="Search">
+					<p>微信平台</p>
+					<img src="images/60.png" alt="" />
+					<h5><img src="images/tag3.png" alt="" /><sub>扫码关注</sub></h5>
+				</div>
+				<div class="Search">
+					<p>官方微博</p>
+					<img src="images/62.jpg" alt="" />
+					<h5><img src="images/tag4.png" alt="" /><sub>加关注</sub></h5>
+				</div>
+			</section>
+			<div id="introduce">
+				<ul>
+					<li><span>我们的服务</span></li>
+					<li><a href="">民族之旅</a></li>
+					<li><a href="">五彩游记</a></li>
+					<li><a href="五彩影像.html">五彩影像</a></li>
+					<li><a href="亲子游.html">亲子游</a></li>
+					<li><a href="五彩新闻.html">五彩新闻</a></li>
+				</ul>
+				<ul>
+					<li><span>友情链接</span></li>
+					<li><a href="http://www.ishjin.com/" target="_blank">尚锦科技</a></li>
+					<li><a href="http://pan.aishangsou.com/" target="_blank">友情链接</a></li>
+					<li><a href="http://guge.aishangsou.com/" target="_blank">谷歌搜索</a></li>
+				</ul>
+			</div>
+			<div id="relation">
+				<h3>免费服务热线</h3>
+				<h2>400-6666-666</h2>
+				<p>邮箱：wucaiguoji@163.com</p>
+				<h3>在线客户</h3>
+				<h2>QQ:18096347120</h2>
+				<p>周一至周六 9:00-18:00</p>
+			</div>
+		</div>
+	</footer>
+	<script src="js/share.js"></script>
+</body>
+</html>

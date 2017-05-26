@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<script src="jquery.js"></script>
+	<script src="model.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<style>
+	.carousel-inner img{
+		transform: scaleX(1.2);
+	}
+	.title{
+		width: 100%;
+		height: 100px;
+		border-bottom: 1px solid #D2D2D2;
+		box-shadow: 0 2px 2px #D2D2D2;
+		background-color: #FAFBFD;
+	}
+	.title p, .title h3{
+		display: inline-block;
+		border-right: 1px solid #D2D2D2;
+		line-height: 100px;
+		margin: 0;
+		padding: 0 50px;
+	}
+	.title h3{
+		font-weight: bold;
+		padding-right: 220px;
+		color: #555555;
+	}
+	#content p{
+		line-height: 30px;
+		margin: 10px 0;
+		color: #666666;
+		
+	}
+	#content div:nth-child(1) img{
+		margin-bottom: 60px;
+	}
+	#content div:nth-child(1) img:last-child{
+		margin-bottom: 200px;
+	}
+</style>
+<body>
+	<div class="top">
+		<div class="contentWidth">
+			<span>创享生活 玩遍世界！</span>
+			<span>您好！欢迎光临五彩草原国际 服务热线:400-6666-666</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<nav>
+		<div class="header">
+			<div class="left">
+				<img src="images/logo.png" alt="五彩草原" />
+				<img src="images/font4.png" alt="" />
+			</div>
+			<div class="right">
+				<ul>
+					<li><a >首页</a></li>
+					<li id="list"><a>呼伦贝尔之旅</a>
+						<div id="solid">
+							<a >做一次蒙古人</a>
+							<a >我在呼伦贝尔遇见你</a>
+							<a >微旅行</a>
+						</div>
+					</li>
+					<li><a >国际游</a></li>
+					<li style="border-bottom: 3.5px solid #FC4902;"><a >亲子游</a></li>
+					<li><a >五彩团队</a></li>
+					<li><a >五彩游记</a></li>
+					<li><a >五彩影像</a></li>
+					<li><a >五彩新闻</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--轮播-->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	    <ol class="carousel-indicators">
+	        <li data-target="#myCarousel" data-slide-to="0" data-interval='100' class="active"></li>
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+	    </ol>   
+	    <div class="carousel-inner">
+	        <div class="item active">
+	            <img src="images/index4.jpg" alt="First slide">
+	        </div>
+	        <div class="item">
+	            <img src="images/index4.jpg" alt="Second slide">
+	        </div>
+	    </div>
+	    <a  id="leftIcon" href="#myCarousel" 
+	        data-slide="prev">
+			<div class="showView"></div>
+	    </a>
+	    <a id="rightIcon"  href="#myCarousel" 
+	        data-slide="next">
+	        <div class="showView"></div>
+	    </a>
+	</div>
+	<section class="title">
+		<div class="contentWidth">
+			<h3><span style="color: #0289CD;" class="glyphicon glyphicon-edit"></span>呼伦贝尔，最遥远的不是距离，而是心的方向</h3>
+			<p>2017-03-03 17:02</p>
+			<p><span class="glyphicon glyphicon-eye-open"></span> 14 </p>
+		</div>
+	</section>
+	<div id="content" class="contentWidth">
+		<div style="width: 825px;display: inline-block;">
+			<p>9月的呼伦贝尔，并不是她最佳的旅游季节，但是这并不影响他的美丽。除去逐渐褪去的绚丽色彩，这里依然还有湖泊天池、湿地、火山，每天还能看见蓝天、白云、黄昏、日落、星空，还有成片的白桦林、悠闲散步的牛羊、孤傲的丹顶鹤。</p>
+			<p>在这片土地上，我们可以眺望额尔古纳河那头的俄罗斯，可以感受成吉思汗在这片大地上谱下的历史篇章。</p>
+			<p>本次行程得以出行的原因其实很突然，原本一直打算去北疆的，鉴于某男友害怕北疆不安全，再三劝阻下，临时改道看草原。旅行全程包车，在这里感谢漠河老毕包车公司以及我们的司机小兵，服务太热情太周到，多亏了你们才给这次旅行留下深刻的印象。</p>
+			<img src="images/1488509131113776.jpg" alt="" />
+			<p>丹顶鹤之乡，让人想起那首小时候就听过的歌曲，有一个小女孩，为了救一直丹顶鹤，就再也没起来，不知道那首歌曲的故事是不是发生在这里。沿着道路一直往里走，路两旁是成片的芦苇从，路上偶尔停留一两只鹤闲庭信步，芦苇大片大片的十分开阔</p>
+			<p>到达看放飞丹顶鹤的地方，已经有人群早早的立起了三脚架准备随时抓拍。2点时间到，饲养员哨声一起，山坡后面的丹顶鹤展翅飞翔，在人们头顶上盘旋一周，最后隔河落在游客的河对岸。</p>
+			<p>整个过程只有几分钟，丹顶鹤也不是很多，还是颇为壮观。相机一直在某男友手里，没能抓拍出美照。</p>
+			<p>晚宿汉庭酒店（扎兰屯庆和家居广场店），推荐</p>
+			<img src="images/1488509138204314.jpg" alt="" />
+			<p>去阿尔山途径月亮小镇柴河，柴河天池群已成为当地有名的景点。这次我们到达的月亮天池是柴河天池群中的一个，由火山口形成，听说这个天池是其中最圆的一个，从天空鸟瞰下来，就好像在镶嵌在绿荫丛中的一颗明珠，耀眼醒目。</p>
+			<p>事后百度可知，柴河地区特殊的火山天池群是全国最大的，也是绝无仅有的。其火山岩地貌极具研究和保护价值，称得上是天然的火山博物馆，柴河的火山地貌和这里湿地的草原景观，完全可以成为一个国家或世界级的地质公园。这个人烟稀少的景点来得值。</p>
+			<img src="images/1488509144244764.jpg" alt="" />
+		</div>
+		<div style="width: 300px;display: inline-block;float: right;overflow: hidden;">
+			<p>相关目的地：<span style="color: #FEA201;">内蒙古</span></p>
+			<img width="300px" src="images/2.jpg" alt="" />
+			<h3 style="color: white;position: relative;bottom: 50px;left: 10px;font-weight: bold;">呼伦贝尔</h3>
+			<p>相关目的地：<span style="color: #FEA201;">内蒙古</span></p>
+			<img width="300px" src="images/2.jpg" alt="" />
+			<h3 style="color: white;position: relative;bottom: 50px;left: 10px;font-weight: bold;">呼伦贝尔</h3>
+			<p>相关目的地：<span style="color: #FEA201;">内蒙古</span></p>
+			<img width="300px" src="images/2.jpg" alt="" />
+			<h3 style="color: white;position: relative;bottom: 50px;left: 10px;font-weight: bold;">呼伦贝尔</h3>
+		</div>
+	</div>
+	<footer>
+		<div class="contentWidth">
+			<section>
+				<h4>关注我们</h4>
+				<div class="Search">
+					<p>微信平台</p>
+					<img src="images/60.png" alt="" />
+					<h5><img src="images/tag3.png" alt="" /><sub>扫码关注</sub></h5>
+				</div>
+				<div class="Search">
+					<p>官方微博</p>
+					<img src="images/62.jpg" alt="" />
+					<h5><img src="images/tag4.png" alt="" /><sub>加关注</sub></h5>
+				</div>
+			</section>
+			<div id="introduce">
+				<ul>
+					<li><span>我们的服务</span></li>
+					<li><a href="">民族之旅</a></li>
+					<li><a href="">五彩游记</a></li>
+					<li><a href="五彩影像.html">五彩影像</a></li>
+					<li><a href="亲子游.html">亲子游</a></li>
+					<li><a href="五彩新闻.html">五彩新闻</a></li>
+				</ul>
+				<ul>
+					<li><span>友情链接</span></li>
+					<li><a href="http://www.ishjin.com/" target="_blank">尚锦科技</a></li>
+					<li><a href="http://pan.aishangsou.com/" target="_blank">友情链接</a></li>
+					<li><a href="http://guge.aishangsou.com/" target="_blank">谷歌搜索</a></li>
+				</ul>
+			</div>
+			<div id="relation">
+				<h3>免费服务热线</h3>
+				<h2>400-6666-666</h2>
+				<p>邮箱：wucaiguoji@163.com</p>
+				<h3>在线客户</h3>
+				<h2>QQ:18096347120</h2>
+				<p>周一至周六 9:00-18:00</p>
+			</div>
+		</div>
+	</footer>
+	<script src="js/share.js"></script>
+</body>
+</html>

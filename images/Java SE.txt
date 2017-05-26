@@ -1,0 +1,6 @@
+D:\jdk1.8.0_111\
+D:\Android Studio
+D:\sdk
+C:\Users\Administrator\AppData\Local\Android\sdk
+D:\sdk\platform-tools;
+D:\sdk\tools;

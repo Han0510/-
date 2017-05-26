@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<script src="jquery.js"></script>
+	<script src="model.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<style>
+	#select{
+		background-color: #F7F8F9;
+		width: 100%;
+		margin-top: 35px;
+		margin-bottom: 50px;
+		font-size: 16px;
+	}
+	#select a{
+		display: inline-block;
+		height: 50px;
+		width: 90px;
+		color: black;
+		text-align: center;
+		line-height: 50px;
+
+	}
+	#select a:hover{
+		text-decoration: none;
+	}
+	/*内容模块*/
+	#title{
+		width: 120px;
+		height: 40px;
+		background-color: #43B6BD;
+		line-height: 40px;
+		border-bottom-right-radius: 30px;
+		border-top-right-radius: 30px;
+		color: white;
+		text-align: center;
+		font-size: 16px;
+		font-weight: normal;
+		margin: 30px 0;
+	}
+	#header{
+		display: flex;
+	}
+	#header p{
+		margin: 15px 0;
+	}
+	#header div:nth-child(1){
+		width: 60%;
+		overflow: hidden;
+	}
+	#header div:nth-child(2){
+		width: 40%;
+		padding: 15px;
+	}
+	#header a,#header a:hover{
+		color: black;
+		text-decoration: none;
+	}
+	#message #position{
+		display: flex;
+	}
+	#message #position div:nth-child(1){
+		width: 60%;
+		padding: 20px 50px 0 0;
+	}
+	#message #position div:nth-child(2){
+		width: 40%;
+		overflow: hidden;
+	}
+	#message p{
+		padding: 10px;
+		border-bottom: 1px solid #D2D2D2;
+	}
+	#message dt{
+		font-weight: normal;
+		line-height: 30px;
+	}
+	#message dd{
+		color: #888888;
+		line-height: 30px;
+	}
+	#message ul{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	#message li{
+		color: #444444;
+		padding: 5px 0;
+	}
+	/*行程*/
+	#route small{
+		color: #888888;
+	}
+	#route dt{
+		width: 50px;
+		height: 50px;
+		background-color: #0EADB6;
+		color: white;
+		font-size: 21px;
+		font-weight: normal;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 50px;
+		float: left;
+	}
+	#route dd{
+		padding-left: 80px;
+	}
+	#route dd h4{
+		font-weight: normal;
+		font-size: 16px;
+		margin: 18px 0;
+	}
+	
+	#explain h5{
+		color: black;
+		font-size: 16px;
+		font-weight: bold;
+		text-align: left;
+	}
+	#explain ol{
+		padding: 15px;
+	}
+	#explain li{
+		margin: 5px;
+	}
+	#explain p{
+		margin-bottom: 100px;
+	}
+</style>
+<body>
+	<div class="top">
+		<div class="contentWidth">
+			<span>创享生活 玩遍世界！</span>
+			<span>您好！欢迎光临五彩草原国际 服务热线:400-6666-666</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<nav>
+		<div class="header">
+			<div class="left">
+				<img src="images/logo.png" alt="五彩草原" />
+				<img src="images/font4.png" alt="" />
+			</div>
+			<div class="right">
+				<ul>
+					<li><a >首页</a></li>
+					<li id="list"><a>呼伦贝尔之旅</a>
+						<div id="solid">
+							<a >做一次蒙古人</a>
+							<a >我在呼伦贝尔遇见你</a>
+							<a >微旅行</a>
+						</div>
+					</li>
+					<li><a >国际游</a></li>
+					<li style="border-bottom: 3.5px solid #FC4902;"><a >亲子游</a></li>
+					<li><a >五彩团队</a></li>
+					<li><a >五彩游记</a></li>
+					<li><a >五彩影像</a></li>
+					<li><a >五彩新闻</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section>
+		<div id="header" class="contentWidth">
+			<div><img src="images/3.jpg" alt="" /></div>
+			<div>
+				<h4>梦幻普吉6天4晚私人定制游 </h4>
+				<p><span style="color: #FC4902;">¥<b style="font-size: 30px;">11998</b>/人起</span>&#X3000;&#X3000;&#X3000;&#X3000;&#X3000;&#X3000;&#X3000; <a href="">更多套餐></a></p>
+				<p style="color: #60B4CF;">此价格为最低价 放心旅游</p>
+				<p><span></span>河南郑州出发</p>
+				<p>主题&#x3000;<i style="display: inline-block;height: 20px;border: 1px solid #3EAFB3;margin-left: 20px;"> 国际段航班采用直飞，尽享舒适飞行体验</i></p>
+				<p><span></span>行程天数 : 0天 &#x3000;<span>郑州</span>出发</p>
+				<p><span></span>航班 : 国际段航班采用直飞，尽享舒适飞行体验</p>
+				<p><span></span>酒店 : 甄选普吉岛海边五星级度假酒店</p>
+				<p><span></span>车导 : 专业司机导游，经验丰富，为您提供安全舒适的优质旅行</p>
+				<p><span></span>亮点 :【美食飨宴】悬崖餐厅、海景餐厅海鲜餐、游船龙虾晚餐、幻多</p>
+			</div>
+		</div>
+	</section>
+	<div class="contentWidth">
+		<section id="select">
+			<a href="">路线详情</a>
+			<a href="">行程安排 </a>
+			<a href="">费用说明</a>
+			<a href="">预订须知</a>
+		</section>
+		<!--交通信息、酒店信息、导游信息-->
+		<section id="message">
+			<h3 id="title">交通信息</h3>
+			<img src="images/5.png" alt="" />
+			<h3 id="title">酒店信息</h3>
+			<p>甄选普吉岛海边五星级度假酒店</p>
+			<div id="position">
+				<div>
+					<dl>
+						<dt>Grand Mercure Phuket Patong</dt>
+						<dd>1 Soi Ratuthit 200 Pi 2 Road,Patong Beach Kathu District,芭东海滩地区,普吉岛,普吉府,83150,泰国 (普吉岛)</dd>
+					</dl>
+					<dl>
+						<dt>酒店介绍</dt>
+						<dd>酒店介绍 普吉岛芭东美爵酒店是一家内设 314 间客房（包括套房和泳池别墅）的海滩度假酒店，距芭东夜生活和安达曼海仅几步之遥。酒店另设一家类似餐厅的小酒馆、三个独具特色的会议场所、一家拥有普吉岛最多啤酒选择的酒吧、健身中心、水疗中心和儿童角，是一个完美融合自然美景与文化遗产的新一代度假胜地。</dd>
+					</dl>
+				</div>
+				<div>
+					<img src="images/8.jpg" alt="" />
+				</div>
+			</div>
+			<h3 id="title">导游信息</h3>
+			<ul>
+				<li>导游身份：当地华裔</li>
+				<li>导游经验：3年以上</li>
+				<li>导游类型：司机兼导游（双语+导游证）</li>
+				<li>语言能力：中文+英文</li>
+			</ul>
+		</section>
+		<!--行程安排-->
+		<section id="route">
+			<h3 id="title">行程安排</h3>
+			<small>此行程是游心为您安排的出行路线，包含在费用中</small>
+			<div>
+				<dl>
+					<dt>D</dt>
+					<dd>
+						<h4>北京/上海-普吉</h4>
+						<p><span></span>餐饮：早餐—敬请自理 午餐—敬请自理 晚餐—敬请自理</p>
+						<p><span></span>酒店： 普吉岛芭东美爵酒店(Grand Mercure Phuket Patong) 或同级</p>
+						<p><span></span>行程： 到达普吉岛后，由专车接您前往酒店入住。</p>
+						<p>13:00 前往普吉岛码头。</p>
+						<p>14:45 从码头出发，前往【攀牙湾】。</p>
+						<p>15:45 抵达盘拿岛，换乘小皮艇，开始红树洞及房间洞探险。</p>
+						<p>16:30 根据潮汐，前往蝙蝠洞和马特洞，参观钟乳石，及成群栖息的蝙蝠</p>
+						<p>17:30 返回船上，返回盘拿岛放水灯</p>
+						<p>18:00 启程返回普吉。观赏日落并拍照。</p>
+						<p>19:10 抵达普吉岛码头。</p>					
+					</dd>
+				</dl>
+			</div>
+		</section>
+		<section id="explain">
+			<h3 id="title">费用说明</h3>
+			<h5>费用包含</h5>
+			<ol>
+				<li>【机票】 国际来回航段全程使用经济舱</li>
+				<li>【签证】行程表所列旅游国家所需的观光签证申办费用。</li>
+				<li>【住宿】行程表标示酒店住宿2人1间房。</li>
+				<li>【交通】行程表标示交通费（用车、油费、过路费）。</li>
+				<li>【餐饮】行程表标示用餐费。</li>
+				<li>【门票】行程表标示景点观光、门票费用。</li>
+				<li>【小费】全程导游、司机服务人员小费。</li>
+				<li>【导游】派遣当地专业导游。</li>
+				<li>【保险】旅游意外险</li>
+				<li>【定制旅行服务费】</li>
+			</ol>
+			<h5>费用不包含</h5>
+			<ol>
+				<li>【升头等舱】若飞机航载配置有头等舱席次，贵宾需求升等订位，需额外加价及另行报价。理</li>
+				<li>【护照】个人护照办理费用。理</li>
+				<li>【酒店小费】房间内床头小费、行李员小费、餐厅用餐服务员小费。理</li>
+				<li>【延长住宿】贵宾另外延长假期的额外住宿，交通、观光费用。理</li>
+				<li>【自行安排行程】行程表上未表明记载的各项开支，贵宾自行安排的行程及应付费用。理</li>
+				<li>【行李超重费】托运行李超过（商务30kg，经济20kg，具体以航空公司要求为准）规定之超额重量费。理</li>
+				<li>【私人消费】如行程标示外的饮料酒类、洗衣、电话、网路及行程外私人交通费。理</li>
+				<li>【单人房差价】贵宾若需求改住单人房，需加收差价。</li>
+				<li>【用餐】初行程内所含餐食以外的正餐，均需自理</li>
+			</ol>
+			<div>
+				<h3 id="title">预定须知</h3>
+				<h5>退订路线</h5>
+				<p>所有的线路，在使用有效期内未与商家预约或预约产品出行日期双方未达成一致，且未消费的可以全额退款；超出有效期，用户未与商家预约的，商家将不予退款，所有损失将由用户承担。</p>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="contentWidth">
+			<section>
+				<h4>关注我们</h4>
+				<div class="Search">
+					<p>微信平台</p>
+					<img src="images/60.png" alt="" />
+					<h5><img src="images/tag3.png" alt="" /><sub>扫码关注</sub></h5>
+				</div>
+				<div class="Search">
+					<p>官方微博</p>
+					<img src="images/62.jpg" alt="" />
+					<h5><img src="images/tag4.png" alt="" /><sub>加关注</sub></h5>
+				</div>
+			</section>
+			<div id="introduce">
+				<ul>
+					<li><span>我们的服务</span></li>
+					<li><a href="">民族之旅</a></li>
+					<li><a href="">五彩游记</a></li>
+					<li><a href="五彩影像.html">五彩影像</a></li>
+					<li><a href="亲子游.html">亲子游</a></li>
+					<li><a href="五彩新闻.html">五彩新闻</a></li>
+				</ul>
+				<ul>
+					<li><span>友情链接</span></li>
+					<li><a href="http://www.ishjin.com/" target="_blank">尚锦科技</a></li>
+					<li><a href="http://pan.aishangsou.com/" target="_blank">友情链接</a></li>
+					<li><a href="http://guge.aishangsou.com/" target="_blank">谷歌搜索</a></li>
+				</ul>
+			</div>
+			<div id="relation">
+				<h3>免费服务热线</h3>
+				<h2>400-6666-666</h2>
+				<p>邮箱：wucaiguoji@163.com</p>
+				<h3>在线客户</h3>
+				<h2>QQ:18096347120</h2>
+				<p>周一至周六 9:00-18:00</p>
+			</div>
+		</div>
+	</footer>
+	<script src="js/share.js"></script>
+</body>
+</html>

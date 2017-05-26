@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<script src="jquery.js"></script>
+	<script src="vue.js"></script>
+	<script src="model.js"></script>
+	
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<style>
+	/*寻相遇*/
+	#sec1 ,.header p{
+		text-align: center;
+		margin-top: 20px;
+	}
+	.header>p{
+		background-image: url(images/tag5.png);
+		height: 56px;
+		line-height: 56px;
+		color: white;
+		background-repeat: no-repeat;
+		background-position-x: 400px;
+	}
+	.classify{
+		display: flex;
+		padding: 30px 0 70px 0;
+	}
+	.classify>div{
+		width: 25%;
+		padding-top: 5px;
+	}
+	.round{
+		border-radius: 50%;
+		width: 204px;
+		height: 204px;
+	}
+	#sec1 .classify p{
+		color: #9999A5;
+	}
+	#sec1 .classify p span{
+		font-size: 23px;
+		color: black;
+	}
+	#app{
+		padding-bottom: 100px;
+	}
+	#bg{
+		background-image: url(images/bg4.png);
+		text-align: center;
+	}
+	#bg button{
+		width: 120px;
+		height: 40px;
+		background-color: #EFEFEF;
+		border: none;
+		margin: 30px;
+		border-radius: 20px;
+	}
+	.bg button:nth-last-child(1).active{
+		background-color: red;
+	}
+	/*呼伦贝尔展示*/
+	#showList{
+		background-image: url(images/bg5.png);
+		text-align: center;
+	}
+	#flex{
+		display: flex;
+	}
+	#flex>div:nth-child(1){
+		width: 25%;
+		padding: 50px 20px 0 0 ;
+	}
+	#flex>div:nth-child(2){
+		width: 75%;
+	}
+	#flex a{
+		display: inline-block;
+		padding: 20px;
+		width: 280px;
+		overflow: hidden;
+		position: relative;
+	}
+	#flex img{
+		/*padding: 10px;*/
+	}
+	#flex a:hover{
+		text-decoration: none;
+	}
+	#once{
+		width: 570px !important;
+	}
+	
+	.descripe{
+		border-radius: 5px;
+		background-color: #EDEDEC;
+		width: 220px;
+		height: 60px;
+		color: black;
+		position: absolute;
+		bottom: 60px;
+		left: 40px;
+		opacity: .8;
+	}
+	.descripe p{
+		width: 90%;
+		margin: 0 auto;
+		padding: 5px;
+	}
+	.descripe p:nth-child(1){
+		border-bottom: 1px solid gray;
+	}
+	#text{
+		background-image: url(images/bg5.jpg);
+		margin-top: 40px;
+		height: 840px;
+		position: relative;
+	}
+	#text img{
+		position: absolute;
+		left: 200px;
+		bottom: 200px;
+	}
+	#text section{
+		width: 605px;
+		height: 611px;
+		background-image: url(images/tag8.png);
+		position: absolute;
+		right: 200px;
+		bottom: 130px;
+		display: flex;
+		justify-content: center;
+		padding-top: 20px;
+	}
+	#text section p{
+		width: 20px;
+		margin: 10px;
+		display: inline-block;
+		float: left;
+	}
+</style>
+<body>
+	<div class="top">
+		<div class="contentWidth">
+			<span>创享生活 玩遍世界！</span>
+			<span>您好！欢迎光临五彩草原国际 服务热线:400-6666-666</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<nav>
+		<div class="header">
+			<div class="left">
+				<img src="images/logo.png" alt="五彩草原" />
+				<img src="images/font4.png" alt="" />
+			</div>
+			<div class="right">
+				<ul>
+					<li><a >首页</a></li>
+					<li id="list" style="border-bottom: 3.5px solid #FC4902;"><a>呼伦贝尔之旅</a>
+						<div id="solid">
+							<a href="国际游.html">做一次蒙古人</a>
+							<a href="呼伦贝尔之旅.html">我在呼伦贝尔遇见你</a>
+							<a href="国际游.html">微旅行</a>
+						</div>
+					</li>
+					<li><a >国际游</a></li>
+					<li><a >亲子游</a></li>
+					<li><a >五彩团队</a></li>
+					<li><a >五彩游记</a></li>
+					<li><a >五彩影像</a></li>
+					<li><a >五彩新闻</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--轮播-->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	    <ol class="carousel-indicators">
+	        <li data-target="#myCarousel" data-slide-to="0" data-interval='100' class="active"></li>
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+	    </ol>   
+	    <div class="carousel-inner">
+	        <div class="item active">
+	            <img src="images/index10.jpg" alt="First slide">
+	        </div>
+	        <div class="item">
+	            <img src="images/index10.jpg" alt="Second slide">
+	        </div>
+	    </div>
+	    <a  id="leftIcon" href="#myCarousel" 
+	        data-slide="prev">
+			<div class="showView"></div>
+	    </a>
+	    <a id="rightIcon"  href="#myCarousel" 
+	        data-slide="next">
+	        <div class="showView"></div>
+	    </a>
+	</div>
+	<section class="contentWidth" id="sec1">
+		<div class="header">
+			<img src="images/font5.png" alt="" />
+			<p>呼伦贝尔，与最好的自己相遇</p>
+		</div>
+		<div class="classify">
+			<div>
+				<img class="round" src="images/27.jpg" alt="" />
+				<p><span>美食</span>&#X3000;Delicious</p>
+			</div>
+			<div>
+				<img class="round" src="images/47.jpg" alt="" />
+				<p><span>美食</span>&#X3000;Delicious</p>
+			</div>
+			<div>
+				<img class="round" src="images/toto.jpg" alt="" />
+				<p><span>美食</span>&#X3000;Delicious</p>
+			</div>
+			<div>
+				<img class="round" src="images/11.jpg" alt="" />
+				<p><span>美食</span>&#X3000;Delicious</p>
+			</div>
+		</div>
+		
+	</section>
+	<section id="bg">
+		<div  class="header contentWidth">
+			<img src="images/font6.png" alt="" />
+			<p>远离尘嚣，回归自然的本真</p>
+			<div id="app">
+				<button @click='selects = "item1"'>美食</button>
+				<button @click='selects = "item2"'>游玩</button>
+				<button @click='selects = "item3"'>导游</button>
+				<button @click='selects = "item4"'>当地特产</button>
+				<button @click='selects = "item5"'>其他</button>
+				<component v-bind:is='selects'></component>
+			</div>
+		</div>
+	</section>
+	<section id="showList">
+		<div class="header contentWidth">
+			<img src="images/font7.png" alt="" />
+			<p>天苍苍，野莽莽，风吹草低现牛羊</p>
+			<div id="flex">
+				<div>
+					<a href="套餐.html">
+						<img src="images/tag7.png" alt="" />
+						<div class="descripe">
+							<p>2016-12-07</p>
+							<p>呼伦贝尔6天行程</p>
+						</div>
+					</a>
+				</div>
+				<div>
+					<a href="套餐.html">
+						<img src="images/26.jpg" alt="" />
+						<div class="descripe">
+							<p>2016-12-07</p>
+							<p>呼伦贝尔6天行程</p>
+						</div>
+					</a>
+					<a href="套餐.html">
+						<img src="images/26.jpg" alt="" />
+						<div class="descripe">
+							<p>2016-12-07</p>
+							<p>呼伦贝尔6天行程</p>
+						</div>
+					</a>
+					<a href="套餐.html">
+						<img src="images/26.jpg" alt="" />
+						<div class="descripe">
+							<p>2016-12-07</p>
+							<p>呼伦贝尔6天行程</p>
+						</div>
+					</a>
+					<a id="once" href="套餐.html">
+						<img src="images/29.jpg" alt="" />
+						<div class="descripe">
+							<p>2016-12-07</p>
+							<p>呼伦贝尔6天行程</p>
+						</div>
+					</a>
+					<a href="套餐.html">
+						<img src="images/27.jpg" alt="" />
+						<div class="descripe">
+							<p>2016-12-07</p>
+							<p>呼伦贝尔6天行程</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="text">
+		<div class="contentWidth">
+			<img src="images/tag9.png" alt="" />
+			<section>
+				<p>上的路似乎没有了尽头。</p>
+				<p>有了五彩缤纷，却多了一片宁静和神秘，一直延伸在一望无际草原</p>
+				<p>呼伦贝尔草原是个风光优美、景色宜人的地方</p>
+				<p>那里有一望无际的绿色,有延绵起伏的大兴安岭,还有美丽富</p>
+				<p>饶的呼伦湖和贝尔湖。.这里被人们盛赞为北国碧玉，人间天堂</p>
+				<p>是世界少有的绿色净土和人间的乐园.四季风光无限</p>
+				<p>拥有太多让人流连忘返的美丽景致。</p>
+				<p>但最让人难忘的还是草原的夜色，月光下草原虽然没</p>
+				<p>呼伦贝尔草原是个风光优美、景色宜人的地方</p>
+			</section>
+				
+		</div>
+	</section>
+	<footer>
+		<div class="contentWidth">
+			<section>
+				<h4>关注我们</h4>
+				<div class="Search">
+					<p>微信平台</p>
+					<img src="images/60.png" alt="" />
+					<h5><img src="images/tag3.png" alt="" /><sub>扫码关注</sub></h5>
+				</div>
+				<div class="Search">
+					<p>官方微博</p>
+					<img src="images/62.jpg" alt="" />
+					<h5><img src="images/tag4.png" alt="" /><sub>加关注</sub></h5>
+				</div>
+			</section>
+			<div id="introduce">
+				<ul>
+					<li><span>我们的服务</span></li>
+					<li><a href="">民族之旅</a></li>
+					<li><a href="">五彩游记</a></li>
+					<li><a href="五彩影像.html">五彩影像</a></li>
+					<li><a href="亲子游.html">亲子游</a></li>
+					<li><a href="五彩新闻.html">五彩新闻</a></li>
+				</ul>
+				<ul>
+					<li><span>友情链接</span></li>
+					<li><a href="http://www.ishjin.com/" target="_blank">尚锦科技</a></li>
+					<li><a href="http://pan.aishangsou.com/" target="_blank">友情链接</a></li>
+					<li><a href="http://guge.aishangsou.com/" target="_blank">谷歌搜索</a></li>
+				</ul>
+			</div>
+			<div id="relation">
+				<h3>免费服务热线</h3>
+				<h2>400-6666-666</h2>
+				<p>邮箱：wucaiguoji@163.com</p>
+				<h3>在线客户</h3>
+				<h2>QQ:18096347120</h2>
+				<p>周一至周六 9:00-18:00</p>
+			</div>
+		</div>
+	</footer>
+	<script id="item1" type="text/html">
+		<div>
+			<div class="classify">
+				<div style="background-color: white;">
+					<img src="images/9.jpg" alt="" />
+					<h4 style="text-align: left;padding-left: 20px;">荤类</h4>
+					<p>牛肉干、鹿胎膏、烤羊腿、干烧白鱼</p>
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</script>
+	<script id="item2" type="text/html">
+		<div>
+			
+		</div>
+	</script>
+	<script id="item3" type="text/html">
+		<div>
+			
+		</div>
+	</script>
+	<script id="item4" type="text/html">
+		<div>
+			
+		</div>
+	</script>
+	<script id="item5" type="text/html">
+		<div>
+	
+		</div>
+	</script>
+	<script>
+		
+		Vue.component('item1',{
+			template : '#item1'
+		})
+		Vue.component('item2',{
+			template : '#item2'
+		})
+		Vue.component('item3',{
+			template : '#item3'
+		})
+		Vue.component('item4',{
+			template : '#item4'
+		})
+		Vue.component('item5',{
+			template : '#item5'
+		})
+		var app = new Vue({
+			el : '#app',
+			data : {
+				selects : 'item1'
+			}
+		})
+		$('button:first').css({'background-color':'#284B7A','color':'white'})
+		$('button').click(function(){
+			$('button').css({'background-color':'#EFEFEF'})
+			$('button').css({'color':'black'})
+			this.style.backgroundColor = '#284B7A'
+			this.style.color = 'white'
+		})
+	</script>
+	<script src="js/share.js"></script>
+</body>
+</html>

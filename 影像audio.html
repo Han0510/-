@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<script src="jquery.js"></script>
+	<script src="model.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<style>
+
+	#audio{
+		padding: 20px 0 50px 0;
+	}
+	#audio h3{
+		font-size: 18px;
+		margin-bottom: 50px;
+	}
+	#audio h3:before{
+		content :'┃';
+		color: #FEA201;
+		font-size: 25px;
+	}
+	#audioList {
+		display: flex;
+		width: 100%;
+	}
+	#audioList div{
+		width: 25%;
+		padding: 10px;
+	}
+	#audioList div #imgP{
+		text-align: center;
+		display: inline-block;
+		width: 280px;
+		height: 200px;
+		overflow: hidden;
+	}
+	#audioList div img{
+		transform: scale(1.5) translateY(35px);
+		z-index: -1;
+	}
+	#audio a{
+		color: black;
+		font-size: 17px;
+	}
+	#audio a:hover{
+		text-decoration: none;
+	}
+	/*播放器*/
+	#play{
+		width: 100%;
+		background-image: url(images/banner7.jpg);
+		padding: 60px;
+	}
+	#play video{
+		display: block;
+		margin: 0 auto;
+		background-color: #444444;
+	}
+</style>
+<body>
+	<div class="top">
+		<div class="contentWidth">
+			<span>创享生活 玩遍世界！</span>
+			<span>您好！欢迎光临五彩草原国际 服务热线:400-6666-666</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<nav>
+		<div class="header">
+			<div class="left">
+				<img src="images/logo.png" alt="五彩草原" />
+				<img src="images/font4.png" alt="" />
+			</div>
+			<div class="right">
+				<ul>
+					<li><a >首页</a></li>
+					<li id="list"><a>呼伦贝尔之旅</a>
+						<div id="solid">
+							<a >做一次蒙古人</a>
+							<a >我在呼伦贝尔遇见你</a>
+							<a >微旅行</a>
+						</div>
+					</li>
+					<li><a >国际游</a></li>
+					<li><a >亲子游</a></li>
+					<li><a >五彩团队</a></li>
+					<li><a >五彩游记</a></li>
+					<li style="border-bottom: 3.5px solid #FC4902;"><a >五彩影像</a></li>
+					<li><a >五彩新闻</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div id="play">
+		<video src="video/movie.mp4" width="1200" controls="" height="580"></video>
+	</div>
+	<div id="audio" class="contentWidth">
+		<h3>视频列表</h3>
+		<div id="audioList">
+			<div>
+				<a id="imgP" href="">
+					<img src="images/13.jpg" alt="" />
+				</a>
+				<a href=""><p style="padding-left: 10px;">最有趣的台湾环岛亲子游记</p></a>
+				<p style="font-size: 16px;"><small style="float: left;padding-left: 10px;">2017-03-03 16:35:15</small><small style="float: right;padding-right: 10px;"><span class="glyphicon glyphicon-play-circle" style="color: #1BA0A9;"></span>&#x3000;0次</small></p>
+			</div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<footer>
+		<div class="contentWidth">
+			<section>
+				<h4>关注我们</h4>
+				<div class="Search">
+					<p>微信平台</p>
+					<img src="images/60.png" alt="" />
+					<h5><img src="images/tag3.png" alt="" /><sub>扫码关注</sub></h5>
+				</div>
+				<div class="Search">
+					<p>官方微博</p>
+					<img src="images/62.jpg" alt="" />
+					<h5><img src="images/tag4.png" alt="" /><sub>加关注</sub></h5>
+				</div>
+			</section>
+			<div id="introduce">
+				<ul>
+					<li><span>我们的服务</span></li>
+					<li><a href="">民族之旅</a></li>
+					<li><a href="">五彩游记</a></li>
+					<li><a href="五彩影像.html">五彩影像</a></li>
+					<li><a href="亲子游.html">亲子游</a></li>
+					<li><a href="五彩新闻.html">五彩新闻</a></li>
+				</ul>
+				<ul>
+					<li><span>友情链接</span></li>
+					<li><a href="http://www.ishjin.com/" target="_blank">尚锦科技</a></li>
+					<li><a href="http://pan.aishangsou.com/" target="_blank">友情链接</a></li>
+					<li><a href="http://guge.aishangsou.com/" target="_blank">谷歌搜索</a></li>
+				</ul>
+			</div>
+			<div id="relation">
+				<h3>免费服务热线</h3>
+				<h2>400-6666-666</h2>
+				<p>邮箱：wucaiguoji@163.com</p>
+				<h3>在线客户</h3>
+				<h2>QQ:18096347120</h2>
+				<p>周一至周六 9:00-18:00</p>
+			</div>
+		</div>
+	</footer>
+	<script src="js/share.js"></script>
+</body>
+</html>
